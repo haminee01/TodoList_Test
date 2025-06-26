@@ -1,0 +1,34 @@
+/* css/style.css */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.card {
+  border-radius: 0.75rem;
+}
+
+/* 완료된 ToDo 항목에 적용될 스타일 */
+.todo-completed .card {
+  /* 회색 배경 */
+  background-color: #f0f0f0;
+
+}
+
+.todo-completed .card-title {
+  /* 취소선 */
+  text-decoration: line-through;
+  /* 텍스트 색상 연하게 */
+  color: #6c757d;
+
+}
+
+/* 호버 시 설명 보이도록 */
+.card-text.description {
+  display: none;
+  /* 기본적으로 숨김 */
+}
+
+/* 호버 시 보임 */
+.card:hover .card-text.description {
+  display: block;
+}
