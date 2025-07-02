@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodoCard = ({ todo }) => {
+const TodoCard = ({ todo, onToggleComplete, onDeleteTodo }) => {
   return (
     <div
       className={`card h-100 shadow-sm ${todo.isCompleted ? "bg-light" : ""}`}
@@ -29,10 +29,11 @@ const TodoCard = ({ todo }) => {
           <div className="d-flex gap-2 align-items-center">
             <div className="form-check form-switch">
               <input
+                className="form-check-input"
                 type="checkbox"
                 checked={todo.isCompleted}
                 id={`toggle-${todo.id}`}
-                disabled
+                onChange={() => onToggleComplete(todo.id)}
               />
               <label
                 className="form-check-label small"
@@ -43,8 +44,8 @@ const TodoCard = ({ todo }) => {
             </div>
             <button
               className="btn btn-outline-secondary btn-sm"
-              disabled
               type="button"
+              onClick={() => onDeleteTodo(todo.id)}
             >
               삭제
             </button>

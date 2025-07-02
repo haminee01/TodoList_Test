@@ -1,6 +1,6 @@
 import React from "react";
 
-function TodoFilter({ currentFilter }) {
+function TodoFilter({ currentFilter, onFilterChange }) {
   const filters = [
     { id: "all", label: "전체" },
     { id: "completed", label: "완료" },
@@ -16,6 +16,7 @@ function TodoFilter({ currentFilter }) {
             className={`btn btn-outline-primary ${
               currentFilter === filter.id ? "active" : ""
             }`}
+            onClick={() => onFilterChange(filter.id)}
           >
             {filter.label}
           </button>
