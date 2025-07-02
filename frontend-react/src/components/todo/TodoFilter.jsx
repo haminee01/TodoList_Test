@@ -8,20 +8,18 @@ function TodoFilter({ currentFilter, onFilterChange }) {
   ];
   return (
     <div className="btn-group" role="group" aria-label="Todo Filter">
-      {filters.map((filter) => {
-        return (
-          <button
-            key={filter.id}
-            type="button"
-            className={`btn btn-outline-primary ${
-              currentFilter === filter.id ? "active" : ""
-            }`}
-            onClick={() => onFilterChange(filter.id)}
-          >
-            {filter.label}
-          </button>
-        );
-      })}
+      {filters.map((filter) => (
+        <button
+          key={filter.id}
+          type="button"
+          className={`
+            btn btn-outline-primary 
+            ${currentFilter === filter.id ? "active" : ""} `}
+          onClick={() => onFilterChange(filter.id)}
+        >
+          {filter.label}
+        </button>
+      ))}
     </div>
   );
 }

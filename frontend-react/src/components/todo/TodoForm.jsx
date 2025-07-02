@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { todos } from "../../utils/data";
+import { initialTodos } from "../../utils/data";
 
 const TodoForm = ({ show, onClose, onAddTodo }) => {
   const [title, setTitle] = useState("");
@@ -9,11 +9,11 @@ const TodoForm = ({ show, onClose, onAddTodo }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!title.trim()) {
-      alert("제목을 입력해주세요.");
+      alert("제목 입력해주세요");
       return;
     }
+
     const newTodo = {
-      id: todos.reduce((maxId, todos) => Math.max(maxId, todos.id) + 1, 0),
       title,
       description,
       isCompleted,
@@ -21,7 +21,6 @@ const TodoForm = ({ show, onClose, onAddTodo }) => {
     onAddTodo(newTodo);
     handleClose();
   };
-
   const handleClose = () => {
     setTitle("");
     setDescription("");
@@ -30,7 +29,6 @@ const TodoForm = ({ show, onClose, onAddTodo }) => {
   };
 
   if (!show) return null;
-
   return (
     <>
       <div

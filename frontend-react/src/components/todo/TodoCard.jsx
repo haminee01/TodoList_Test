@@ -36,7 +36,7 @@ const TodoCard = ({ todo, onToggleComplete, onDeleteTodo }) => {
                 onChange={() => onToggleComplete(todo.id)}
               />
               <label
-                className="form-check-label small"
+                className="form-check-lable small"
                 htmlFor={`toggle-${todo.id}`}
               >
                 상태 변경

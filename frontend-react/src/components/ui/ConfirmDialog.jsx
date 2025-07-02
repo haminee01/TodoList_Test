@@ -43,7 +43,6 @@ function ConfirmDialog({
                 className="btn btn-secondary"
                 onClick={onCancel}
               >
-                <i className="bi bi-x-circle me-1"></i>
                 {cancelText}
               </button>
               <button

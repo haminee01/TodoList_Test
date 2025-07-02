@@ -17,7 +17,7 @@ function TodoStats({ todos }) {
         style={{ height: "25px" }}
       >
         <p className="text-muted mb-0">
-          총 {stats.totalCount}개 중 {stats.completedCount}개 완료
+          총 {stats.totalCount}개 중 {stats.completedCount} 개 완료
         </p>
         {stats.totalCount > 0 && (
           <div
@@ -25,6 +25,7 @@ function TodoStats({ todos }) {
             style={{ maxWidth: "300px", height: "100%" }}
           >
             <div
+              Add
               className="progress-bar bg-success"
               role="progressbar"
               style={{ width: `${stats.progressPercentage}%` }}

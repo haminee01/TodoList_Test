@@ -1,7 +1,7 @@
 import React from "react";
 import TodoFilter from "../todo/TodoFilter";
 
-function TodoAction({ onAddClick, currentFilter, onFilterChange }) {
+function TodoActions({ onAddClick, currentFilter, onFilterChange }) {
   return (
     <div className="d-flex gap-2">
       <button type="button" className="btn btn-success" onClick={onAddClick}>
@@ -18,4 +18,4 @@ function TodoAction({ onAddClick, currentFilter, onFilterChange }) {
   );
 }
 
-export default TodoAction;
+export default TodoActions;
